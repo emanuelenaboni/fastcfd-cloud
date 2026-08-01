@@ -1,0 +1,42 @@
+FASTCFD URBAN STUDIO v3.24.7 - STUDENT EDITION
+
+Open FastCFD_Urban_v3.24.7_Student.html in Chrome or Edge.
+
+STARTING A SITE
+- The site chooser opens automatically when the project is empty.
+- SITO / OSM reopens it at any time.
+- Choose one of four clear starting points:
+  1. OPENSTREETMAP: search an address or click the map, then load real context.
+  2. PASEO IMPERIAL 34: load Miguel's prepared Madrid case.
+  3. OPEN FASTCFD PROJECT: continue a saved .fcfd.json project.
+  4. IMPORT 3DM / OBJ / DXF: use a standalone CAD model or add it to OSM.
+
+COMMANDS
+- All original menu commands are visible by default.
+- Menus and side panels remain closed until clicked.
+- MODALITA SEMPLICE temporarily hides the full menus without deleting anything.
+- TUTTI I COMANDI restores the complete interface immediately.
+
+CFD WORKFLOW
+- Choose or load the site.
+- Add or import the proposed building.
+- Set wind and grid.
+- Run CFD.
+- REPORT + PNG unlocks only after convergence and exports:
+  Paseo_Imperial_34_CFD_Plan_v3.24.7.png
+  Paseo_Imperial_34_CFD_Iso_v3.24.7.png
+  the urban CFD HTML report.
+
+VIEWPORT
+- Right drag: orbit.
+- Shift + right drag or middle drag: pan.
+- Wheel: zoom.
+- Double click or Extents: fit model.
+- Left click: selection or drawing.
+
+OSM / RHINO
+- OSM is georeferenced with North = world -Y.
+- Rhino 3DM, OBJ and DXF preserve file axes by default.
+- Use "Convert +Y North to OSM North" only when intentionally required.
+
+Keep the HTML together with all supplied JS/WASM files.

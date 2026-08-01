@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Paseo Imperial 34 - Rapporto di impostazione CFD urbana v3.24.7</title>
+  <style>
+    :root {
+      --ink:#17212b; --muted:#64707c; --line:#d8dde2; --paper:#fff;
+      --wash:#f3f5f6; --dark:#202832; --gold:#c38a52; --red:#9d342e;
+      --blue:#587d9b; --green:#2d7c69;
+    }
+    * { box-sizing:border-box }
+    body { margin:0; background:#e4e7ea; color:var(--ink); font:15px/1.52 Arial,Helvetica,sans-serif }
+    .toolbar { position:sticky; top:0; z-index:5; display:flex; justify-content:flex-end; padding:10px 18px; background:var(--dark) }
+    .toolbar button { padding:8px 13px; border:0; background:#fff; color:var(--dark); font-weight:700; cursor:pointer }
+    main { width:min(1080px,calc(100% - 28px)); margin:24px auto; background:var(--paper); box-shadow:0 12px 34px #0002 }
+    header { padding:44px 52px 35px; color:#fff; background:var(--dark); border-top:8px solid var(--gold) }
+    .eyebrow { color:#e8bc91; text-transform:uppercase; letter-spacing:.14em; font-size:11px }
+    h1 { max-width:850px; margin:11px 0 18px; font-size:38px; line-height:1.12 }
+    .meta { display:flex; flex-wrap:wrap; gap:8px 24px; color:#d6dde3 }
+    .status { padding:20px 52px; color:#fff; background:var(--red); font-weight:700 }
+    section { padding:32px 52px; border-top:1px solid var(--line) }
+    h2 { margin:0 0 14px; font-size:24px; line-height:1.22 }
+    h3 { margin:20px 0 7px; font-size:17px }
+    p { max-width:900px }
+    .lead { font-size:18px }
+    .cards { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:20px }
+    .card { padding:15px; border:1px solid var(--line); background:var(--wash) }
+    .card span { display:block; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.06em }
+    .card b { display:block; margin-top:4px; font-size:23px }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:24px }
+    table { width:100%; border-collapse:collapse }
+    th,td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top }
+    th { width:35%; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.05em }
+    .gate { border-left:5px solid var(--red); padding:15px 18px; background:#fff1ef }
+    .ok { color:var(--green); font-weight:700 }
+    .pending { color:var(--red); font-weight:700 }
+    ul,ol { padding-left:22px }
+    li+li { margin-top:7px }
+    footer { padding:21px 52px; color:#cbd3da; background:var(--dark); font-size:12px }
+    @media(max-width:760px) {
+      header,section,.status { padding-left:22px; padding-right:22px }
+      h1 { font-size:29px }
+      .cards,.grid { grid-template-columns:1fr 1fr }
+      main { width:100%; margin:0 }
+      .toolbar { position:static }
+    }
+    @media(max-width:480px) { .cards,.grid { grid-template-columns:1fr } }
+    @media print {
+      body { background:#fff }
+      .toolbar { display:none }
+      main { width:100%; margin:0; box-shadow:none }
+      section { break-inside:avoid }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar"><button onclick="window.print()">Stampa / Salva PDF</button></div>
+  <main>
+    <header>
+      <div class="eyebrow">FastCFD Urban Studio v3.24.7 - Student Edition</div>
+      <h1>Paseo Imperial 34 · rapporto di impostazione e validazione CFD urbana</h1>
+      <div class="meta">
+        <span>MADC · 166 viviendas EMVS</span>
+        <span>Mahou-Calderón, Madrid</span>
+        <span>40.403255 N, -3.716106 E</span>
+        <span>30 luglio 2026</span>
+      </div>
+    </header>
+
+    <div class="status">
+      STATO: SIMULAZIONE NON ANCORA ESEGUITA. Questo documento valida geometria e impostazioni,
+      ma non contiene risultati di velocità, convergenza o comfort inventati.
+    </div>
+
+    <section>
+      <h2>Il caso corretto è ora collegato al sito reale del progetto Miguel</h2>
+      <p class="lead">
+        Il modello FastCFD combina il contesto OpenStreetMap salvato per Paseo Imperial 34
+        con i tredici volumi del progetto MADC. Il precedente caso generico del centro di Madrid
+        e ogni contenuto proveniente da analisi termiche esterne sono esclusi.
+      </p>
+      <div class="cards">
+        <div class="card"><span>Oggetti modello</span><b>661</b></div>
+        <div class="card"><span>Edifici totali</span><b>100</b></div>
+        <div class="card"><span>Alberature</span><b>153</b></div>
+        <div class="card"><span>Volumi progetto</span><b>13</b></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Geometria e provenienza dei dati</h2>
+      <div class="grid">
+        <table>
+          <tr><th>Sito</th><td>Paseo Imperial 34, Mahou-Calderón, Madrid</td></tr>
+          <tr><th>Coordinate</th><td>40.403255 N, -3.716106 E</td></tr>
+          <tr><th>Contesto</th><td>87 edifici OSM, 153 elementi di vegetazione, 401 strade, 6 superfici di suolo e 1 elemento d'acqua</td></tr>
+          <tr><th>Progetto</th><td>13 volumi del modello Miguel, aggiunti al contesto urbano</td></tr>
+        </table>
+        <table>
+          <tr><th>OSM</th><td>Georeferenziato; Nord = asse mondo -Y</td></tr>
+          <tr><th>Rhino / OBJ / DXF</th><td>Assi del file conservati in importazione</td></tr>
+          <tr><th>Trasformazione</th><td>Nessuna conversione automatica +Y/-Y applicata ai modelli CAD</td></tr>
+          <tr><th>Attribuzione</th><td>Dati cartografici © OpenStreetMap contributors</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Scenario CFD urbano preparato</h2>
+      <div class="cards">
+        <div class="card"><span>Direzione</span><b>SW 225°</b></div>
+        <div class="card"><span>Velocità ingresso</span><b>3.5 m/s</b></div>
+        <div class="card"><span>Piano pedonale</span><b>Z = 1.5 m</b></div>
+        <div class="card"><span>Griglia iniziale</span><b>4.0 m/cella</b></div>
+      </div>
+      <p>
+        La griglia da 4 m/cella è un'impostazione didattica di screening: serve a verificare
+        rapidamente il funzionamento del caso. Non è sufficiente per una decisione finale su
+        spigoli, ingressi, passaggi stretti o sicurezza pedonale.
+      </p>
+    </section>
+
+    <section>
+      <h2>Metodo previsto dal tool</h2>
+      <table>
+        <tr><th>Solver</th><td>LBM D2Q9 bidimensionale sul piano orizzontale, con modello LES Smagorinsky</td></tr>
+        <tr><th>Campo principale</th><td>Velocità del vento sul piano pedonale e linee di corrente</td></tr>
+        <tr><th>Post-processing</th><td>Media temporale, velocità media e massima, quota di area calma, fascia 1-4 m/s e area accelerata</td></tr>
+        <tr><th>Convergenza richiesta</th><td>Flag di convergenza attivo e residuo per passo inferiore a 2.0 × 10<sup>-5</sup></td></tr>
+        <tr><th>Tipo report</th><td>Urban site analysis; controlli del report interno nascosti in questa modalità</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Controllo di validità</h2>
+      <div class="gate">
+        <div class="ok">PASS — sito, coordinate, contesto OSM, massing Miguel e scenario CFD presenti.</div>
+        <div class="ok">PASS — generatore del report bloccato finché il solver non supera la convergenza.</div>
+        <div class="pending">PENDING — nessuno stato solver salvato nel progetto.</div>
+        <div class="pending">PENDING — nessun campo di velocità disponibile.</div>
+        <div class="pending">PENDING — nessun valore di convergenza disponibile.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cosa conterrà il rapporto CFD finale</h2>
+      <ol>
+        <li>Vista planimetrica del campo di velocità e delle linee di corrente a Z = 1.5 m.</li>
+        <li>Vista assonometrica che collega il piano CFD al contesto e ai volumi di progetto.</li>
+        <li>Velocità media e massima, area calma, fascia pedonale 1-4 m/s e area accelerata.</li>
+        <li>Passi del solver, flow-through, media temporale, risoluzione e residuo finale.</li>
+        <li>Diagnosi spaziale di scie, accelerazioni agli spigoli e percorsi di ventilazione.</li>
+        <li>Limiti del modello 2D e prove successive: griglia più fine e più direzioni del vento.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Conclusione attuale</h2>
+      <p class="lead">
+        Il caso CFD è correttamente impostato sul sito Miguel ed è pronto per il calcolo.
+        Non è ancora tecnicamente possibile concludere se il progetto migliori o peggiori il
+        vento pedonale, perché il progetto salvato non contiene una soluzione numerica.
+        Qualunque mappa o percentuale presentata prima della convergenza sarebbe falsa.
+      </p>
+    </section>
+
+    <footer>
+      FastCFD Urban Studio v3.24.7 · rapporto CFD di impostazione e validazione ·
+      nessun dato termico o risultato esterno incluso
+    </footer>
+  </main>
+</body>
+</html>

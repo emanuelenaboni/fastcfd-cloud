@@ -1,0 +1,19 @@
+{
+  "name": "fastcfd-cloud",
+  "version": "3.24.7-cloud.1",
+  "private": true,
+  "description": "Cloud-ready distribution and validation harness for FastCFD Urban Studio.",
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/smoke.spec.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

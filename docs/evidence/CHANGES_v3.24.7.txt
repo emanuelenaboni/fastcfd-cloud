@@ -1,0 +1,24 @@
+FASTCFD URBAN STUDIO v3.24.7 - STUDENT EDITION
+
+RESTORED COMPLETE TOOL
+- All original menu commands are visible at startup.
+- No working command has been removed.
+- Side panels and dropdown contents remain closed until requested.
+- Simple mode is optional and reversible with TUTTI I COMANDI.
+
+INTUITIVE SITE SELECTION
+- Added a site chooser that opens automatically on an empty project.
+- Added the visible SITO / OSM command in the header.
+- Four explicit choices:
+  OPENSTREETMAP, PASEO IMPERIAL 34, OPEN FASTCFD PROJECT,
+  IMPORT 3DM / OBJ / DXF.
+- OPENSTREETMAP opens the existing address/map picker directly.
+
+CFD OUTPUT
+- The result gate is unchanged: report and PNG output require convergence.
+- A valid run creates plan and axonometric CFD PNGs plus the urban HTML report.
+
+PRESERVED FEATURES
+- Full solver controls, wind-direction campaign, clear/resume, weather, grid,
+  geometry editing, layers, graphics, reports and viewport navigation remain.
+- OSM and CAD/Rhino axis handling remain separate.

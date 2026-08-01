@@ -1,0 +1,59 @@
+{
+  "tool": "FastCFD Urban Studio v3.24.7 Student",
+  "case": "MADC 166 Viviendas EMVS - Paseo Imperial 34 - Mahou-Calderon",
+  "site": {
+    "latitude": 40.403255,
+    "longitude": -3.716106,
+    "source": "Miguel Drive project"
+  },
+  "checks": {
+    "html_inline_scripts_parse": {
+      "status": "pass",
+      "count": 9
+    },
+    "quick_cfd_interface": {
+      "status": "pass",
+      "primary_commands": ["SITO / OSM", "AVVIA CFD", "REPORT + PNG"],
+      "all_original_commands_visible_at_startup": true,
+      "site_chooser_options": ["OpenStreetMap", "Paseo Imperial 34", "Open FastCFD project", "Import 3DM / OBJ / DXF"],
+      "side_panels_closed_at_startup": true,
+      "report_locked_until_convergence": true
+    },
+    "wrong_central_madrid_case_removed": {
+      "status": "pass",
+      "removed_site": [40.4168, -3.7038],
+      "replacement_site": [40.403255, -3.716106]
+    },
+    "embedded_real_site_case": {
+      "status": "pass",
+      "osm_buildings": 87,
+      "osm_vegetation": 153,
+      "project_massing_volumes": 13
+    },
+    "saved_project": {
+      "status": "pass",
+      "objects": 661,
+      "buildings_including_project": 100,
+      "vegetation": 153,
+      "roads": 401,
+      "lots": 6,
+      "water": 1
+    },
+    "urban_report_type": {
+      "status": "pass",
+      "selectable_in_tool": true,
+      "indoor_controls_hidden_in_urban_mode": true
+    },
+    "wind_result": {
+      "status": "not_run",
+      "reason": "The supplied real-site project contains no saved FastCFD result or solver state. No convergence, velocity or comfort value has been invented.",
+      "prepared_scenario": "SW 225 deg at 3.5 m/s, Z=1.5 m, 4.0 m/cell"
+    },
+    "urban_cfd_report": {
+      "status": "pending_solver_run",
+      "setup_report": "Paseo_Imperial_34_Miguel_Urban_CFD_Setup_Report_v3.24.7.html",
+      "rule": "The included setup report contains no result claims. Generate the final result report only from the active FastCFD result after convergence has been checked."
+    }
+  },
+  "scope_note": "This package is CFD-only. It contains the real site geometry, the Miguel project massing, the prepared wind scenario and the report generator. It contains no thermal, UTCI or external-analysis evidence."
+}
