@@ -7,25 +7,45 @@
       "version": "3.23.0",
       "folder": "FastCFD_Urban_v3.23.0_Student",
       "html_sha256": "1481845a1a6bb6d63297b95bcac4723096baa9c941884c88ef24404c60c6baef",
-      "zip": null
+      "zip": {
+        "name": "FastCFD_Urban_v3.23.0_Student.zip",
+        "size": 1723449,
+        "sha256": "faa4cade8601520f889a70618d7907a213963f98017a5da362a583241a16f7a2",
+        "repacked_from_directory": true
+      }
     },
     {
       "version": "3.24.0",
       "folder": "FastCFD_Urban_v3.24.0_Student",
       "html_sha256": "5f69fbb4f040d6827b2d975a7580e9a572e0424c922c71bea8624eccf6cc2145",
-      "zip": null
+      "zip": {
+        "name": "FastCFD_Urban_v3.24.0_Student.zip",
+        "size": 5225761,
+        "sha256": "8d018f8c42966889d059fd24faa34e628587a42f6a691657a7df7490152e49d5",
+        "repacked_from_directory": true
+      }
     },
     {
       "version": "3.24.1",
       "folder": "FastCFD_Urban_v3.24.1_Student",
       "html_sha256": "43421dc2f2d830096b27f868ea6eedae7f4fc70854b4d1a71c1e5d9a001aaad6",
-      "zip": null
+      "zip": {
+        "name": "FastCFD_Urban_v3.24.1_Student.zip",
+        "size": 5413722,
+        "sha256": "5391abe906d0c99dc005d9e9697a4671346492500c0bd7e7181f66630b912618",
+        "repacked_from_directory": true
+      }
     },
     {
       "version": "3.24.2",
       "folder": "FastCFD_Urban_v3.24.2_Student",
       "html_sha256": "3b0c2a53b5d7608c387baef7396084ee07f95f74c01971963addbc98ff3442f0",
-      "zip": null
+      "zip": {
+        "name": "FastCFD_Urban_v3.24.2_Student.zip",
+        "size": 5418365,
+        "sha256": "c693df6905b3d6def3edf1517af46f4c51bbce758f90173d783f4edace6c7518",
+        "repacked_from_directory": true
+      }
     },
     {
       "version": "3.24.3",
